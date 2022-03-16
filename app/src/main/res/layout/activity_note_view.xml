@@ -29,23 +29,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/Theme.MyApplication.PopupOverlay" />
+                app:popupTheme="@style/Theme.MyApplication.PopupOverlay" >
 
-            <ImageButton
-                android:id="@+id/arrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_arrow"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="15dp"
-                android:background="@android:color/transparent"
-                tools:ignore="ContentDescription" />
+                <ImageButton
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@android:color/transparent"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <include
-        layout="@layout/content_scrolling" />
+        layout="@layout/content_scrolling"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/editNote"

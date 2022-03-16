@@ -10,21 +10,21 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.myapplication.databinding.ActivityNoteViewBinding;
 import com.example.myapplication.databinding.ActivityScrollingBinding;
-import com.example.myapplication.databinding.NoteViewBinding;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class NoteViewActivity extends MainActivity {
 
-    private NoteViewBinding binding;
+    private ActivityNoteViewBinding binding;
     private ImageButton arrowButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = NoteViewBinding.inflate(getLayoutInflater());
+        binding = ActivityNoteViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         arrowButton = findViewById(R.id.arrow);
