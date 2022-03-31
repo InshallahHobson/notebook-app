@@ -7,9 +7,8 @@ import com.google.android.material.tabs.TabLayout;
 
 public class NotesDB {
     public static final String KEY_ROWID = "_id";
-    private static final String KEY_CODE = "code";
-    private static final String KEY_NAME = "name";
-    private static final String KEY_CONTENT = "content";
+    public static final String KEY_TITLE = "title";
+    public static final String KEY_CONTENT = "content";
 
     private static final String TAG = "NotesDb";
     public static final String SQLITE_TABLE = "Note";
@@ -17,9 +16,8 @@ public class NotesDB {
     private static final String TABLE_CREATE =
             "CREATE TABLE if not exists " + SQLITE_TABLE + " (" +
                     KEY_ROWID + " integer PRIMARY KEY autoincrement, " +
-                    KEY_CODE + ", " +
-                    KEY_NAME + ", " +
-                    "UNIQUE (" + KEY_CODE + "));";
+                    KEY_TITLE +
+                    ");";
 
     public static void onCreate (SQLiteDatabase db) {
         Log.w(TAG, "onCreate: TABLE_CREATE");

@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,7 @@ public class NoteViewActivity extends MainActivity {
 
     private ActivityNoteViewBinding binding;
     private ImageButton arrowButton;
+    private Uri uri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,18 +37,17 @@ public class NoteViewActivity extends MainActivity {
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
         toolBarLayout.setTitle(getTitle());
 
-        Bundle notes = getIntent().getExtras();
-        Note obj = notes.getParcelable("com.example.myapplication.Note");
+        uri = getIntent().getData();
 
         FloatingActionButton editBtn = binding.editNote;
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Note note = new Note();
                 Intent i = new Intent(NoteViewActivity.this, NoteEditActivity.class);
-                i.putExtra("com.example.myapplication.Note", note);
+                i.setData(uri);
                 i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(i);
+                finish();
             }
         });
     }

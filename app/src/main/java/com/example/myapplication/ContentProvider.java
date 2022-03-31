@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 
 public class ContentProvider extends android.content.ContentProvider {
     private DatabaseHelper dbHelper;
-
     private static final int ALL_NOTES = 1;
     private static final int SINGLE_NOTE = 2;
 

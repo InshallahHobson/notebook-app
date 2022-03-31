@@ -34,10 +34,11 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ListView
-        android:id="@+id/notesList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <include
+        layout="@layout/content_scrolling">
+    </include>
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/newNote"
@@ -48,4 +49,7 @@
         android:layout_marginBottom="16dp"
         app:srcCompat="@android:drawable/ic_input_add" />
 
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+

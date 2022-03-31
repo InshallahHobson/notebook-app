@@ -2,6 +2,11 @@
     <string name="app_name"> Notebook </string>
     <string name="note_title"> note_title </string>>
     <string name="notes"> Notes here! </string>
+    <string-array name="imageFor">
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+    </string-array>
     <string name="note_content">
         "Material is the metaphor.\n\n"
 

@@ -8,11 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Note">
+        android:theme="@style/Theme.Note"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -23,7 +24,7 @@
             android:exported="false"
             android:label="Note (Edit Mode)">
             <intent-filter>
-                <category android:name="com.example.myapplication"/>
+                <category android:name="com.example.myapplication" />
             </intent-filter>
         </activity>
         <activity
@@ -31,9 +32,16 @@
             android:exported="false"
             android:label="Note (View Mode)">
             <intent-filter>
-                <category android:name="com.example.myapplication"/>
+                <category android:name="com.example.myapplication" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".ContentProvider" android:exported="true"
+            android:readPermission="true"
+            android:writePermission="true"
+            android:authorities="com.example.myapplication.ContentProvider" />
+
     </application>
 
 </manifest>
